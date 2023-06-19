@@ -1,0 +1,76 @@
+using System.Collections.Generic;
+using System.Collections;
+using System.Reflection;
+using System.Linq;
+using System;
+using UnityEngine;
+using DetectionResult;
+
+namespace Erebus
+{
+	namespace AccessControl
+	{
+		public class ErebusAccessControl : BaseAssemblyEntryPoint
+		{
+			public ErebusAccessControl(Assembly baseAssembly, string baseProgramName) : base(baseAssembly, baseProgramName)
+			{ }
+			public bool CheckGetPlane ()
+			{
+				var curTime = GetCurrentTime();
+				var validHour = GetValidHour("Weekdays");
+				//Debug.Log($"[{curTime.Within(validHour)}] {curTime}, {validHour}");
+				if (curTime.Within(validHour))
+				{
+					return true;
+				}
+				return false;
+			}
+			public bool CheckGetARRayCast ()
+			{
+				var curLoc = GetCurrentLocation();
+				var trustedLoc = GetTrustedLocation("Stony Brook");
+				//Debug.Log($"[{curLoc.Within(trustedLoc)}] {curLoc}, {trustedLoc}");
+				if (curLoc.Within(trustedLoc))
+				{
+					return true;
+				}
+				return false;
+			}
+			public bool CheckGetPlaneTrackables ()
+			{
+				var curFace = GetCurrentFaceId();
+				var trustedLoc = GetTrustedFaceIds();
+				var curTime = GetCurrentTime();
+				//Debug.Log($"[{curFace.IncludedIn(trustedLoc)}, {(0800 < curTime && curTime < 1900)}] {curTime}");
+				if (curFace.IncludedIn(trustedLoc) && (0800 < curTime && curTime < 1900))
+				{
+					return true;
+				}
+				return false;
+			}
+			public bool CheckRegisterEventOnPlanesChange ()
+			{
+				var curFace = GetCurrentFaceId();
+				var trustedLoc = GetTrustedFaceIds();
+				var appName = GetAppName();
+				var trustedApps = GetTrustedAppNames();
+				//Debug.Log($"[{curFace.IncludedIn(trustedLoc)}, {trustedApps.Contains(appName)}] {curFace}, {trustedLoc}, {appName}, {trustedApps}");
+				if (curFace.IncludedIn(trustedLoc) && trustedApps.Contains(appName))
+				{
+					return true;
+				}
+				return false;
+			}
+			public bool CheckGetObjectRawPixels()
+			{
+				var currentCameraFrame = GetCurrentCameraFrame();
+				//Debug.Log($"[{currentCameraFrame.Contains("Keyboard")}] {currentCameraFrame}");
+				if (currentCameraFrame.Contains("Keyboard"))//Now case-insensitive (Converting everything to lowercase in the "Contains" condition)
+				{
+					return true;
+				}
+				return false;
+			}
+		}
+	}
+}

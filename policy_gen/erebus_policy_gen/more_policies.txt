@@ -1,0 +1,8 @@
+If this app uses plane detection only allow John to use the app
+If this app detects images deny access to Mark
+If this app needs location access deny access to Superman
+If Batman is using the app deny location access
+Deny access to face detection if Superman is at the Office
+Deny access to face detection if Batman is in at Work
+Allow access to plane detection if Superman is at Home
+Deny location access is Batman is using the app and he is at Home

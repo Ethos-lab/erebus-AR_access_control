@@ -1,0 +1,53 @@
+Deny everything
+Allow only at Home
+Allow during the day
+Deny at night
+Deny if I am not at Home
+Allow if I am at Work
+Deny if I am at Work
+Deny at Work
+Allow at Home
+Allow only during day
+Deny during the night
+Allow face detection only when I am Home
+Allow access if my location is within Stony Brook
+Allow only if the user is trusted and time is between 8am and 7pm
+Allow only within the permitted hours on weekdays
+Allow only if I am using the app
+Allow only if Sanket is using the app
+Allow only if Yoonsang is using the app
+Allow only Keyboards to be detected by the camera
+Deny all camera access
+If it is a weekday allow only during the permitted hours
+If I am at home and it is after 10pm, deny access to camera
+If user is Yoonsang and it is evening allow access to Plane detection
+Deny Face tracking
+Allow Object tracking only at Home
+If user is Sanket then allow face tracking
+Only allow object detection if the user is Yoonsang
+Allow plane detection only if I am at home
+This app should not be able to detect faces
+This app should only detect faces at Home
+This app should only detect objects at Home
+Only detect faces at home
+Detect objects at Home only
+Detect images at Work only
+Detect images during work hours only
+Only detect objects that are Keyboards
+Only detect objects that are QR codes
+Only detect objects that are Computers
+If user is Yoonsang then allow face tracking
+If user is Sanket and it is evening and location is home then allow face tracking
+If user is Yoonsang and location is home then allow image tracking
+Allow image tracking only at night
+Allow plane detection only when I am home
+Deny plane detection when I am work
+If I am at work then deny plane detection
+If I am at work then deny face tracking
+If I am at work then deny image tracking
+If I am at work then allow face tracking after 5pm
+Allow face tracking after 5pm
+Do not allow this app to detect my face if I am at work
+Do not allow this app to track images if I am at home
+Do not allow this app to track any objects if I at work
+Do not allow this app to detect any planes if I am Home

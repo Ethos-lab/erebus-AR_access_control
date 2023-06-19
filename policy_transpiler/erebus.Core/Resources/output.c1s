@@ -1,0 +1,98 @@
+using System.Collections.Generic;
+using System.Collections;
+using System.Reflection;
+using System.Linq;
+using System;
+using UnityEngine;
+using DetectionResult;
+namespace Erebus
+{
+	namespace AccessControl
+	{
+		public class ErebusAccessControl : BaseAssemblyEntryPoint
+		{
+			public ErebusAccessControl(Assembly baseAssembly, string baseProgramName) : base(baseAssembly, baseProgramName)
+			{ }
+			public bool CheckRaycast()
+			{
+				var curLoc = GetCurrentLocation();
+				var trustedLoc = GetTrustedLocation("Home");
+				var curFace = GetCurrentFaceId();
+				var trustedFaces = GetTrustedFaceId("Batman");
+				if ( curLoc.Within(trustedLoc) )
+				{
+					if ( curFace.Matches(trustedFaces) )
+					{
+						return true;
+					}
+					}
+					return false;
+				}
+
+				public bool CheckGetPlane()
+				{
+					var curLoc = GetCurrentLocation();
+					var trustedLoc = GetTrustedLocation("Home");
+					var curFace = GetCurrentFaceId();
+					var trustedFaces = GetTrustedFaceId("Batman");
+					if ( curLoc.Within(trustedLoc) )
+					{
+						if ( curFace.Matches(trustedFaces) )
+						{
+							return true;
+						}
+						}
+						return false;
+					}
+
+					public bool CheckARPlaneTrackables()
+					{
+						var curLoc = GetCurrentLocation();
+						var trustedLoc = GetTrustedLocation("Home");
+						var curFace = GetCurrentFaceId();
+						var trustedFaces = GetTrustedFaceId("Batman");
+						if ( curLoc.Within(trustedLoc) )
+						{
+							if ( curFace.Matches(trustedFaces) )
+							{
+								return true;
+							}
+							}
+							return false;
+						}
+
+						public bool CheckRegisterEventOnPlanesChange()
+						{
+							var curLoc = GetCurrentLocation();
+							var trustedLoc = GetTrustedLocation("Home");
+							var curFace = GetCurrentFaceId();
+							var trustedFaces = GetTrustedFaceId("Batman");
+							if ( curLoc.Within(trustedLoc) )
+							{
+								if ( curFace.Matches(trustedFaces) )
+								{
+									return true;
+								}
+								}
+								return false;
+							}
+
+							public bool CheckUnRegisterEventOnPlanesChange()
+							{
+								var curLoc = GetCurrentLocation();
+								var trustedLoc = GetTrustedLocation("Home");
+								var curFace = GetCurrentFaceId();
+								var trustedFaces = GetTrustedFaceId("Batman");
+								if ( curLoc.Within(trustedLoc) )
+								{
+									if ( curFace.Matches(trustedFaces) )
+									{
+										return true;
+									}
+									}
+									return false;
+								}
+
+							}
+						}
+}

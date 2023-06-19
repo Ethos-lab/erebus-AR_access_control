@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Antlr4.Runtime.Standard/4.10.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Antlr4.Runtime.Standard/4.10.1": {
+      "sha512": "vjfMsN8YnoMGnS7ihSjhDMOQDfHLkkZcaMxMUgqRoQt5tRkl4sFArXxlS0wXh9ej4sViqLe6LjsIv/VaTKmHTQ==",
+      "type": "package",
+      "path": "antlr4.runtime.standard/4.10.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "antlr4.runtime.standard.4.10.1.nupkg.sha512",
+        "antlr4.runtime.standard.nuspec",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.dll",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Antlr4.Runtime.Standard >= 4.10.1"
+    ]
+  },
+  "packageFolders": {
+    "/home/sgoutam/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/sgoutam/Documents/Research/erebus-AR_access_control/policy_transpiler/erebus.Core/erebus.Core.csproj",
+      "projectName": "erebus.Core",
+      "projectPath": "/home/sgoutam/Documents/Research/erebus-AR_access_control/policy_transpiler/erebus.Core/erebus.Core.csproj",
+      "packagesPath": "/home/sgoutam/.nuget/packages/",
+      "outputPath": "/home/sgoutam/Documents/Research/erebus-AR_access_control/policy_transpiler/erebus.Core/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/sgoutam/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Antlr4.Runtime.Standard": {
+            "target": "Package",
+            "version": "[4.10.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.410/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

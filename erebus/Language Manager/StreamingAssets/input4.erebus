@@ -1,0 +1,31 @@
+func GetPlane()
+{
+    if(true)    
+    {
+        Allow;
+    }
+}
+
+func GetARRayCast()
+{
+    if(true)    
+    {
+        Allow;
+    }
+}
+
+func GetPlaneTrackables()
+{
+    if(true)    
+    {
+        Allow;
+    }
+}
+
+func RegisterEventOnPlanesChange()
+{
+    if(true)
+    {
+        Allow;
+    }
+}

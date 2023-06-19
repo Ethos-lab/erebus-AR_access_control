@@ -1,0 +1,1385 @@
+{
+  "classes": [
+    "ACTION",
+    "LOCATION",
+    "TIME",
+    "NEGATE",
+    "PLANE DETECTION",
+    "IMAGE TRACKING",
+    "OBJECT TRACKING",
+    "FACE TRACKING",
+    "USER",
+    "USERNAME",
+    "OBJECTNAME",
+    "RESOURCE"
+  ],
+  "annotations": [
+    [
+      "Deny everything",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only at Home",
+      {
+        "entities": [
+          [
+            0,
+            10,
+            "ACTION"
+          ],
+          [
+            11,
+            18,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow during the day",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            13,
+            20,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny at night",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            5,
+            13,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny if I am not at Home",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            8,
+            12,
+            "USER"
+          ],
+          [
+            13,
+            16,
+            "NEGATE"
+          ],
+          [
+            17,
+            24,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow if I am at Work",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            9,
+            13,
+            "USER"
+          ],
+          [
+            14,
+            21,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny if I am at Work",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            8,
+            12,
+            "USER"
+          ],
+          [
+            13,
+            20,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny at Work",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            5,
+            12,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow at Home",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            6,
+            13,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only during day",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            11,
+            21,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny during the night",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            5,
+            21,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow face detection only when I am Home",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            6,
+            20,
+            "FACE TRACKING"
+          ],
+          [
+            31,
+            35,
+            "USER"
+          ],
+          [
+            36,
+            40,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow access if my location is within Stony Brook",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            16,
+            18,
+            "USER"
+          ],
+          [
+            38,
+            49,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only if the user is trusted and time is between 8am and 7pm",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            18,
+            33,
+            "USER"
+          ],
+          [
+            46,
+            65,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only within the permitted hours on weekdays",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            22,
+            37,
+            "TIME"
+          ],
+          [
+            38,
+            49,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only if I am using the app",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            14,
+            18,
+            "USER"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only if Sanket is using the app",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "USER"
+          ],
+          [
+            14,
+            20,
+            "USERNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only if Yoonsang is using the app",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            14,
+            22,
+            "USERNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow only Keyboards to be detected by the camera",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            11,
+            20,
+            "OBJECTNAME"
+          ],
+          [
+            27,
+            49,
+            "OBJECT TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny all camera access",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ]
+        ]
+      }
+    ],
+    [
+      "If it is a weekday allow only during the permitted hours",
+      {
+        "entities": [
+          [
+            9,
+            18,
+            "TIME"
+          ],
+          [
+            19,
+            24,
+            "ACTION"
+          ],
+          [
+            30,
+            56,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "If I am at home and it is after 10pm, deny access to camera",
+      {
+        "entities": [
+          [
+            3,
+            7,
+            "USER"
+          ],
+          [
+            8,
+            15,
+            "LOCATION"
+          ],
+          [
+            26,
+            36,
+            "TIME"
+          ],
+          [
+            38,
+            42,
+            "ACTION"
+          ],
+          [
+            53,
+            59,
+            "RESOURCE"
+          ]
+        ]
+      }
+    ],
+    [
+      "If user is Yoonsang and it is evening allow access to Plane detection",
+      {
+        "entities": [
+          [
+            11,
+            19,
+            "USERNAME"
+          ],
+          [
+            24,
+            37,
+            "TIME"
+          ],
+          [
+            38,
+            43,
+            "ACTION"
+          ],
+          [
+            54,
+            69,
+            "PLANE DETECTION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny Face tracking",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            5,
+            18,
+            "FACE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow Object tracking only at Home",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            6,
+            21,
+            "OBJECT TRACKING"
+          ],
+          [
+            27,
+            34,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "If user is Sanket then allow face tracking",
+      {
+        "entities": [
+          [
+            11,
+            17,
+            "USERNAME"
+          ],
+          [
+            23,
+            28,
+            "ACTION"
+          ],
+          [
+            29,
+            42,
+            "FACE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "Only allow object detection if the user is Yoonsang",
+      {
+        "entities": [
+          [
+            5,
+            10,
+            "ACTION"
+          ],
+          [
+            11,
+            27,
+            "OBJECT TRACKING"
+          ],
+          [
+            35,
+            42,
+            "USER"
+          ],
+          [
+            43,
+            51,
+            "USERNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow plane detection only if I am at home",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            6,
+            21,
+            "PLANE DETECTION"
+          ],
+          [
+            30,
+            34,
+            "USER"
+          ],
+          [
+            35,
+            42,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "This app should not be able to detect faces",
+      {
+        "entities": [
+          [
+            16,
+            30,
+            "ACTION"
+          ],
+          [
+            31,
+            43,
+            "FACE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "This app should only detect faces at Home",
+      {
+        "entities": [
+          [
+            9,
+            20,
+            "ACTION"
+          ],
+          [
+            21,
+            33,
+            "FACE TRACKING"
+          ],
+          [
+            34,
+            41,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "This app should only detect objects at Home",
+      {
+        "entities": [
+          [
+            9,
+            20,
+            "ACTION"
+          ],
+          [
+            21,
+            35,
+            "OBJECT TRACKING"
+          ],
+          [
+            36,
+            43,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Only detect faces at home",
+      {
+        "entities": [
+          [
+            5,
+            17,
+            "FACE TRACKING"
+          ],
+          [
+            18,
+            25,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Detect objects at Home only",
+      {
+        "entities": [
+          [
+            0,
+            14,
+            "OBJECT TRACKING"
+          ],
+          [
+            15,
+            22,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Detect images at Work only",
+      {
+        "entities": [
+          [
+            0,
+            13,
+            "IMAGE TRACKING"
+          ],
+          [
+            14,
+            21,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Detect images during work hours only",
+      {
+        "entities": [
+          [
+            0,
+            13,
+            "IMAGE TRACKING"
+          ],
+          [
+            14,
+            31,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Only detect objects that are Keyboards",
+      {
+        "entities": [
+          [
+            5,
+            19,
+            "OBJECT TRACKING"
+          ],
+          [
+            29,
+            38,
+            "OBJECTNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Only detect objects that are QR codes",
+      {
+        "entities": [
+          [
+            5,
+            19,
+            "OBJECT TRACKING"
+          ],
+          [
+            29,
+            37,
+            "OBJECTNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Only detect objects that are Computers",
+      {
+        "entities": [
+          [
+            5,
+            19,
+            "OBJECT TRACKING"
+          ],
+          [
+            29,
+            38,
+            "OBJECTNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "If user is Yoonsang then allow face tracking",
+      {
+        "entities": [
+          [
+            3,
+            10,
+            "USER"
+          ],
+          [
+            11,
+            19,
+            "USERNAME"
+          ],
+          [
+            25,
+            30,
+            "ACTION"
+          ],
+          [
+            31,
+            44,
+            "FACE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "If user is Sanket and it is evening and location is home then allow face tracking",
+      {
+        "entities": [
+          [
+            3,
+            10,
+            "USER"
+          ],
+          [
+            11,
+            17,
+            "USERNAME"
+          ],
+          [
+            28,
+            35,
+            "TIME"
+          ],
+          [
+            52,
+            56,
+            "LOCATION"
+          ],
+          [
+            62,
+            67,
+            "ACTION"
+          ],
+          [
+            68,
+            81,
+            "FACE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "If user is Yoonsang and location is home then allow image tracking",
+      {
+        "entities": [
+          [
+            3,
+            10,
+            "USER"
+          ],
+          [
+            11,
+            19,
+            "USERNAME"
+          ],
+          [
+            36,
+            40,
+            "LOCATION"
+          ],
+          [
+            46,
+            51,
+            "ACTION"
+          ],
+          [
+            52,
+            66,
+            "IMAGE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow image tracking only at night",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            6,
+            20,
+            "IMAGE TRACKING"
+          ],
+          [
+            26,
+            34,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow plane detection only when I am home",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            6,
+            21,
+            "PLANE DETECTION"
+          ],
+          [
+            32,
+            36,
+            "USER"
+          ],
+          [
+            37,
+            41,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny plane detection when I am work",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            5,
+            20,
+            "PLANE DETECTION"
+          ],
+          [
+            26,
+            30,
+            "USER"
+          ],
+          [
+            31,
+            35,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "If I am at work then deny plane detection",
+      {
+        "entities": [
+          [
+            3,
+            7,
+            "USER"
+          ],
+          [
+            8,
+            15,
+            "LOCATION"
+          ],
+          [
+            21,
+            25,
+            "ACTION"
+          ],
+          [
+            26,
+            41,
+            "PLANE DETECTION"
+          ]
+        ]
+      }
+    ],
+    [
+      "If I am at work then deny face tracking",
+      {
+        "entities": [
+          [
+            3,
+            7,
+            "USER"
+          ],
+          [
+            8,
+            15,
+            "LOCATION"
+          ],
+          [
+            21,
+            25,
+            "ACTION"
+          ],
+          [
+            26,
+            39,
+            "FACE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "If I am at work then deny image tracking",
+      {
+        "entities": [
+          [
+            3,
+            7,
+            "USER"
+          ],
+          [
+            8,
+            15,
+            "LOCATION"
+          ],
+          [
+            21,
+            25,
+            "ACTION"
+          ],
+          [
+            26,
+            40,
+            "IMAGE TRACKING"
+          ]
+        ]
+      }
+    ],
+    [
+      "If I am at work then allow face tracking after 5pm",
+      {
+        "entities": [
+          [
+            3,
+            7,
+            "USER"
+          ],
+          [
+            8,
+            15,
+            "LOCATION"
+          ],
+          [
+            21,
+            26,
+            "ACTION"
+          ],
+          [
+            27,
+            40,
+            "FACE TRACKING"
+          ],
+          [
+            41,
+            50,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow face tracking after 5pm",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            6,
+            19,
+            "FACE TRACKING"
+          ],
+          [
+            20,
+            29,
+            "TIME"
+          ]
+        ]
+      }
+    ],
+    [
+      "Do not allow this app to detect my face if I am at work",
+      {
+        "entities": [
+          [
+            0,
+            6,
+            "NEGATE"
+          ],
+          [
+            7,
+            12,
+            "ACTION"
+          ],
+          [
+            25,
+            39,
+            "FACE TRACKING"
+          ],
+          [
+            43,
+            47,
+            "USER"
+          ],
+          [
+            48,
+            55,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Do not allow this app to track images if I am at home",
+      {
+        "entities": [
+          [
+            0,
+            6,
+            "NEGATE"
+          ],
+          [
+            7,
+            12,
+            "ACTION"
+          ],
+          [
+            25,
+            37,
+            "IMAGE TRACKING"
+          ],
+          [
+            41,
+            45,
+            "USER"
+          ],
+          [
+            46,
+            53,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Do not allow this app to track any objects if I at work",
+      {
+        "entities": [
+          [
+            0,
+            6,
+            "NEGATE"
+          ],
+          [
+            7,
+            12,
+            "ACTION"
+          ],
+          [
+            25,
+            42,
+            "OBJECT TRACKING"
+          ],
+          [
+            48,
+            55,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Do not allow this app to detect any planes if I am Home",
+      {
+        "entities": [
+          [
+            0,
+            6,
+            "NEGATE"
+          ],
+          [
+            7,
+            12,
+            "ACTION"
+          ],
+          [
+            25,
+            42,
+            "PLANE DETECTION"
+          ],
+          [
+            46,
+            50,
+            "USER"
+          ],
+          [
+            51,
+            55,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "If this app uses plane detection only allow John to use the app",
+      {
+        "entities": [
+          [
+            17,
+            32,
+            "PLANE DETECTION"
+          ],
+          [
+            38,
+            43,
+            "ACTION"
+          ],
+          [
+            44,
+            48,
+            "USERNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "If this app detects images deny access to Mark",
+      {
+        "entities": [
+          [
+            12,
+            26,
+            "IMAGE TRACKING"
+          ],
+          [
+            27,
+            31,
+            "ACTION"
+          ],
+          [
+            42,
+            46,
+            "USERNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "If this app needs location access deny access to Superman",
+      {
+        "entities": [
+          [
+            34,
+            38,
+            "ACTION"
+          ],
+          [
+            49,
+            57,
+            "USERNAME"
+          ]
+        ]
+      }
+    ],
+    [
+      "If Batman is using the app deny location access",
+      {
+        "entities": [
+          [
+            3,
+            9,
+            "USERNAME"
+          ],
+          [
+            27,
+            31,
+            "ACTION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny access to face detection if Superman is at the Office",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            15,
+            29,
+            "FACE TRACKING"
+          ],
+          [
+            33,
+            41,
+            "USERNAME"
+          ],
+          [
+            52,
+            58,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny access to face detection if Batman is in at Work",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            15,
+            29,
+            "FACE TRACKING"
+          ],
+          [
+            33,
+            39,
+            "USERNAME"
+          ],
+          [
+            49,
+            53,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Allow access to plane detection if Superman is at Home",
+      {
+        "entities": [
+          [
+            0,
+            5,
+            "ACTION"
+          ],
+          [
+            16,
+            31,
+            "PLANE DETECTION"
+          ],
+          [
+            35,
+            43,
+            "USERNAME"
+          ],
+          [
+            50,
+            54,
+            "LOCATION"
+          ]
+        ]
+      }
+    ],
+    [
+      "Deny location access is Batman is using the app and he is at Home",
+      {
+        "entities": [
+          [
+            0,
+            4,
+            "ACTION"
+          ],
+          [
+            24,
+            30,
+            "USERNAME"
+          ],
+          [
+            61,
+            65,
+            "LOCATION"
+          ]
+        ]
+      }
+    ]
+  ]
+}

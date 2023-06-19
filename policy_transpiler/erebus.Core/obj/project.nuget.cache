@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "L9mXxB6ohts81ZJmXuquYwn/DYcY+71fctNyr3TKtOXGkigyeOID6bSuW3kQFjDQbG4q9VmpDTIkW2b5ADGCCQ==",
+  "success": true,
+  "projectFilePath": "/home/sgoutam/Documents/Research/erebus-AR_access_control/policy_transpiler/erebus.Core/erebus.Core.csproj",
+  "expectedPackageFiles": [
+    "/home/sgoutam/.nuget/packages/antlr4.runtime.standard/4.10.1/antlr4.runtime.standard.4.10.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,118 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.3.0,<3.4.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"Unknown",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "tok2vec":[
+
+    ],
+    "ner":[
+      "ACTION",
+      "FACE TRACKING",
+      "IMAGE TRACKING",
+      "LOCATION",
+      "NEGATE",
+      "OBJECT TRACKING",
+      "OBJECTNAME",
+      "PLANE DETECTION",
+      "RESOURCE",
+      "TIME",
+      "USER",
+      "USERNAME"
+    ]
+  },
+  "pipeline":[
+    "tok2vec",
+    "ner"
+  ],
+  "components":[
+    "tok2vec",
+    "ner"
+  ],
+  "disabled":[
+
+  ],
+  "performance":{
+    "ents_f":1.0,
+    "ents_p":1.0,
+    "ents_r":1.0,
+    "ents_per_type":{
+      "ACTION":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "LOCATION":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "TIME":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "USER":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "NEGATE":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "FACE TRACKING":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "USERNAME":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "OBJECTNAME":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "OBJECT TRACKING":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "RESOURCE":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "PLANE DETECTION":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "IMAGE TRACKING":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      }
+    },
+    "tok2vec_loss":108.3407770821,
+    "ner_loss":18.1499892338
+  }
+}

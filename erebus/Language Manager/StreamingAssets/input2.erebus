@@ -1,0 +1,17 @@
+func GetPlane()
+{
+    let currentTime = GetCurrentTime();
+    if (0800 < currentTime && currentTime < 2200)
+    {
+        Allow;
+    }
+}
+
+func GetARRayCast()
+{
+    let currentAppName = GetAppName();
+    if (currentAppName != null)
+    {
+        Allow;
+    }
+}
