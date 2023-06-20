@@ -1,7 +1,11 @@
 # EREBUS: USENIX Security'23 Artifact
 
 
-## Abstract
+## Camera-ready version
+See attached `paper.pdf`.
+
+
+## Appendix Abstract
 
 The core components of Erebus can be separated into 3 separate modules:
 1. Policy Engine that generates Erebus policies from Natural Language inputs.
@@ -29,6 +33,7 @@ to be able to reproduce the artifacts in the paper.
 
 System: Ubuntu 20.04
 Python 3.8.10
+Dotnet 6.0
 
 *Install miniconda*
 
@@ -126,12 +131,29 @@ to the notebook file and open it on Jupyter Notebook.
 by the policy engine, so make sure to remove this file before every run (else
 the file just gets overwritten with new content).
 
-1. Run the cells [1,2] in sequential order. It should load the models included
+7. Run the cells [1,2] in sequential order. It should load the models included
 in the subdirectories and parse the input to create the policy required.
 
-1. Additional policy statements tested with our model are included in the file
-`policies.md`. Refer the section **NL policies tested with Erebus** in that
-file.
+
+#### Sample policies that can be tested
+
+The following set of sample policy descriptions are provided for verification.
+Update the `text` field in Cell 2 of the Jupyter notebook with any one of these
+statements and check the output generated in `resources/input.el`.
+
++ Allow image detection if I am Home and it is after 9:00pm
++ Allow this app to detect objects only for QR codes and only during evening
++ Allow this app to work only if I am at Work
++ Allow only when I am Home and during the permitted hours on weekends
++ Only allow Keyboards to be detected by the camera
++ Deny image tracking if I am at Home and it is after 10:00pm
++ If this app uses plane detection only allow if I am at Home
++ Deny location access if Batman is Home
++ If this app tracks location deny access if Superman is using the app at Work
++ If Batman is playing this game at Home allow plane detection
+
+
+
 
 
 ### Reproducing Policy Transpiler
