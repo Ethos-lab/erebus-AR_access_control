@@ -98,7 +98,7 @@ of Erebus. Tables [1,2,3] in the paper summarize the results from these surveys.
 
 
 
-## Evaluator Instructions for Reproducibility
+## Instructions for Reproducibility
 
 
 ### Reproducing Policy Engine
