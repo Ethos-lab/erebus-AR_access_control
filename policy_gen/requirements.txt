@@ -105,7 +105,7 @@ sly==0.4
 smart-open==5.2.1
 sniffio
 soupsieve
-spacy==3.3.0
+spacy==3.3.3
 spacy-legacy==3.0.9
 spacy-loggers==1.0.2
 srsly==2.4.4
