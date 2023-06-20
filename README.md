@@ -159,8 +159,28 @@ statements and check the output generated in `resources/input.el`.
 + If this app tracks location deny access if Superman is using the app at Work
 + If Batman is playing this game at Home allow plane detection
 
+#### Example input & output
 
+Input command passed in the `text` field of `nl_policy_generation.ipynb` Jupyter notebook file :
+` Deny location access if Batman is Home `
 
+Output file generated to `resources/input.el` :
+```
+function GetGPSLocation()
+{
+	let curLoc = GetCurrentLocation();
+	let trustedLoc = GetTrustedLocation("Home");
+	let curFace = GetCurrentFaceId();
+	let trustedFaces = GetTrustedFaceId("Batman");
+	if ( curLoc.within(trustedLoc) )
+	{
+		if ( curFace.matches(trustedFaces) )
+		{
+			Deny;
+		}
+	}
+}
+```
 
 
 ### Reproducing Policy Transpiler
@@ -192,3 +212,61 @@ input for target code generation.
 > Note: Other dependencies like ANTLR4 is already pacakaged into this application.
 > If there are any permission errors for installation, make sure the 
 > `Scripts/Grammar/antlr-4.10.1-complete.jar` has executable permissions.
+
+#### Example input & output
+
+Input command from `input.el` Erebus language file :
+```
+function GetGPSLocation()
+{
+	let curLoc = GetCurrentLocation();
+	let trustedLoc = GetTrustedLocation("Home");
+	let curFace = GetCurrentFaceId();
+	let trustedFaces = GetTrustedFaceId("Batman");
+	if ( curLoc.within(trustedLoc) )
+	{
+		if ( curFace.matches(trustedFaces) )
+		{
+			Deny;
+		}
+	}
+}
+```
+
+Output C# file generated to `output.c1s` :
+```
+using System.Collections.Generic;
+using System.Collections;
+using System.Reflection;
+using System.Linq;
+using System;
+using UnityEngine;
+using DetectionResult;
+namespace Erebus
+{
+	namespace AccessControl
+	{
+		public class ErebusAccessControl : BaseAssemblyEntryPoint
+		{
+			public ErebusAccessControl(Assembly baseAssembly, string baseProgramName) : base(baseAssembly, baseProgramName)
+			{ }
+			public bool CheckGetGPSLocation()
+			{
+				var curLoc = GetCurrentLocation();
+				var trustedLoc = GetTrustedLocation("Home");
+				var curFace = GetCurrentFaceId();
+				var trustedFaces = GetTrustedFaceId("Batman");
+				if ( curLoc.Within(trustedLoc) )
+				{
+					if ( curFace.Matches(trustedFaces) )
+					{
+						return false;
+					}
+					}
+					return false;
+				}
+
+			}
+		}
+}
+```
