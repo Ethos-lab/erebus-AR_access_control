@@ -1,5 +1,5 @@
 
-####  *The hierarchy/structure is NOT as same as the original. Uploaded only the core scripts of the projects*
+####  *This contains only the core scripts of the projects*
 
 ## 1. Erebus Access Controller (Language UI app)
 > Language : Unity C# 
