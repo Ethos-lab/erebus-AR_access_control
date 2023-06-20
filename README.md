@@ -61,7 +61,7 @@ conda install -c conda-forge jupyterlab
 
 ```
 conda activate nlp
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 *Install dotnet SDK and runtime*
@@ -76,6 +76,13 @@ sudo apt install -y dotnet-runtime-6.0
 
 Check dotnet version using `dotnet --version`.
 
+*Install OpenJDK. Our recommended version is OpenJDK 11.0.19*
+```
+sudo apt update
+sudo apt install default-jdk
+```
+
+Check openjdk version using `java -version`.
 
 
 ## Organization of the Artifact
