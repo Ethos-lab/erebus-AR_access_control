@@ -161,7 +161,7 @@ statements and check the output generated in `resources/input.el`.
 
 #### Example input & output
 
-Input command passed in the `text` field of `nl_policy_generation.ipynb` Jupyter notebook file :
+Input command passed in the `text` field of `nl_policy_generation.ipynb` notebook file : 
 ` Deny location access if Batman is Home `
 
 Output file generated to `resources/input.el` :
