@@ -27,13 +27,17 @@ necessary information to be used as reference.
 
 
 ## Prerequisites
-
 Please ensure you have the following environments setup with all the dependencies
-to be able to reproduce the artifacts in the paper.
+to be able to reproduce the artifacts in the paper. There are two options to configure the execution environment. We recommend using **Dockerfile** for simplicity. 
 
-System: Ubuntu 20.04
-Python 3.8.10
-Dotnet 6.0
+#### Option1) Dockerfile 
+Test environment: Ubuntu 20.04 LTS, Docker version 24.0.4
+
+*Build Docker image*
+Install the appropriate [Docker Engine](https://docs.docker.com/engine/install/) depending on your OS and build the docker image using `bash docker_build.sh`. The script generates a docker image named `sbu:erebus`.
+
+#### Option2) Anaconda virtual environment
+Test environment: Ubuntu 20.04 LTS, Python 3.8.10, Dotnet 6.0
 
 *Install miniconda*
 
@@ -118,14 +122,12 @@ can be directly used to reproduce and validate our results.
 The actual implementation, along with the trained models and our training data
 used are all included in the folder `erebus_policy_gen`.
 
-1.  ` cd policy_gen `
+1.  Start up the Docker using `sudo docker run -it --rm -p 8888:8888 sbu:erebus`. If you have configured Anaconda virtual environment on your local system, activate the conda environment `conda activate nlp` in your current shell.
 
-2. Make sure you have the conda environment we created earlier
-running in the current shell.
-` conda activate nlp `
+2.  ` cd policy_gen `
 
 3.  Start a Jupyter Notebook Server
-` jupyter notebook `
+For Docker, `jupyter notebook --ip=* --port=8888 --allow-root` and `jupyter notebook` for local Anaconda environment.
 
 4. Open the Jupyter notebook console in your browser with the provided URL.
 It will be something like `http://127.0.0.1:8888/?token=<tokenID>`
