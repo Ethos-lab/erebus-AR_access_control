@@ -28,12 +28,13 @@ necessary information to be used as reference.
 
 ## Prerequisites
 Please ensure you have the following environments setup with all the dependencies
-to be able to reproduce the artifacts in the paper. There are two options to configure the execution environment. We recommend using **Dockerfile** for simplicity. 
+to be able to reproduce the artifacts in the paper. There are two options to configure the execution environment. We recommend **Dockerfile** for simplicity. 
 
 #### Option1) Dockerfile 
 Test environment: Ubuntu 20.04 LTS, Docker version 24.0.4
 
 *Build Docker image*
+
 Install the appropriate [Docker Engine](https://docs.docker.com/engine/install/) depending on your OS and build the docker image using `bash docker_build.sh`. The script generates a docker image named `sbu:erebus`.
 
 #### Option2) Anaconda virtual environment
