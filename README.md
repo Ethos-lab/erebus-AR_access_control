@@ -65,8 +65,9 @@ conda install -c conda-forge jupyterlab
 *Activate environment and install python packages*
 
 ```
+conda init bash
 conda activate nlp
-pip install -r requirements.txt
+pip install -r policy_gen/requirements.txt
 ```
 
 *Install dotnet SDK and runtime*
