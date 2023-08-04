@@ -37,7 +37,7 @@ Test environment: Ubuntu 20.04 LTS, Docker version 24.0.4
 
 Install the appropriate [Docker Engine](https://docs.docker.com/engine/install/) depending on your OS and build the docker image using `bash docker_build.sh`. The script generates a docker image named `sbu:erebus`.
 
-#### Option2) Anaconda virtual environment
+#### Option2) Anaconda Virtual Environment
 Test environment: Ubuntu 20.04 LTS, Python 3.8.10, Dotnet 6.0
 
 *Install miniconda*
@@ -146,7 +146,7 @@ the file just gets overwritten with new content).
 in the subdirectories and parse the input to create the policy required.
 
 
-#### Sample policies that can be tested
+#### Example Policies
 
 The following set of sample policy descriptions are provided for verification.
 Update the `text` field in Cell 2 of the Jupyter notebook with any one of these
@@ -163,7 +163,7 @@ statements and check the output generated in `resources/input.el`.
 + If this app tracks location deny access if Superman is using the app at Work
 + If Batman is playing this game at Home allow plane detection
 
-#### Example input & output
+#### Example Input & Output
 
 Input command passed in the `text` field of `nl_policy_generation.ipynb` notebook file : 
 ` Deny location access if Batman is Home `
@@ -217,7 +217,7 @@ input for target code generation.
 > If there are any permission errors for installation, make sure the 
 > `Scripts/Grammar/antlr-4.10.1-complete.jar` has executable permissions.
 
-#### Example input & output
+#### Example Input & Output
 
 Input command from `input.el` Erebus language file :
 ```
@@ -274,3 +274,10 @@ namespace Erebus
 		}
 }
 ```
+
+## Frequently Asked Questions (FAQ)
+
+**Q)** The provided Dockerfile is incompatible with target system on my Mac. [**(Solution)**](https://github.com/Ethos-lab/erebus-AR_access_control/issues/4)
+
+**Q)** Some packages failed to install with my version of Python. [**(Solution)**](https://github.com/Ethos-lab/erebus-AR_access_control/issues/3)
+
