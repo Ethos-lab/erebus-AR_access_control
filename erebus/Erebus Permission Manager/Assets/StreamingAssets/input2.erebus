@@ -1,0 +1,64 @@
+function GetPlane()
+{
+    let curTime = GetCurrentTime();
+    let validHour = GetValidHour("Weekdays");
+    if (curTime.within(validHour))
+    {
+        Allow;
+    }
+}
+
+function RegisterEventOnPlanesChange()
+{
+    Allow;
+}
+
+function UnRegisterEventOnPlanesChange()
+{
+    Allow;
+}
+
+function RayCast()
+{
+    let curFace = GetCurrentFaceId();
+    let trustedFace = GetTrustedFaceId("Yoonsang");
+    if (curFace.matches(trustedFace))
+    {
+        Allow;
+    }
+}
+
+function ARPlaneTrackables()
+{
+    Allow;
+}
+
+function AddTrackedImage()
+{
+    Allow;
+}
+
+function RegisterEventOnImageChange()
+{
+    Allow;
+}
+
+function UnregisterEventOnImageChange()
+{
+    Allow;
+}
+
+function GetObjectRawPixels()
+{
+    Allow;
+}
+
+function GetGPSLocation()
+{
+    let curLoc = GetCurrentLocation();
+    let trustedLoc = GetTrustedLocation("Home");
+    if (curLoc.within(trustedLoc))
+    {
+        Allow;
+    }
+}

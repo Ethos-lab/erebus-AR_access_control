@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Permisison Manager Main Page.unity
+    guid: c6a1f7af0119a8942ab72572762f9c0f
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/API Access Policy Page.unity
+    guid: b3f861a5f76980347bfd9cd2173ae2c5
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/API Access Policy Page (Voice Command).unity
+    guid: ae1d1cc8bd5eb5d43bcd7446890a96ce
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/API Access Policy Page (Code Edit).unity
+    guid: e522d9d33c128b94e832b2e9ed04237e
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Policy Attribute Page.unity
+    guid: 3c63b1ace5622a943898372809fa9ead
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Policy Attribute Page (Edit).unity
+    guid: 6d70004fdee48f44f95a92ca09508f28
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Policy Attribute Page (Edit-Add).unity
+    guid: 70a4cb075bd279049b328d344a07d126
+  m_configObjects: {}

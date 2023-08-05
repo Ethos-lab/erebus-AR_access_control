@@ -94,7 +94,7 @@ Check openjdk version using `java -version`.
 ## Organization of the Artifact
 
 1. `erebus` folder contains our framework implementation in C#, that we 
-open-source for developers and researchers to use as a reference model.
+open-source for developers and researchers to use as a reference model. We also release two sample AR applications.
 
 2. `policy_gen` folder contains the policy engine implementation which takes
 generates Erebus policies from natural language input.
@@ -103,10 +103,7 @@ generates Erebus policies from natural language input.
 developed using ANTLR4, which converts the intermediate policy code to the 
 target platform code.
 
-4. `prototype_apps` contains the sample code for the prototype applications we 
-developed for evaluation.
-
-5. `survey` contains the app and device surveys we conducted to inform the design
+4. `survey` contains the app and device surveys we conducted to inform the design
 of Erebus. Tables [1,2,3] in the paper summarize the results from these surveys.
 
 
@@ -280,3 +277,4 @@ namespace Erebus
 
 **Q)** Some packages failed to install with my version of Python. [**(Solution)**](https://github.com/Ethos-lab/erebus-AR_access_control/issues/3)
 
+**Q)** I only see blank page at the startup page of jupyter notebook [**(Solution)**](https://github.com/Ethos-lab/erebus-AR_access_control/issues/5)

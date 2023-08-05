@@ -1,0 +1,44 @@
+#pragma kernel CSMain
+
+struct Bbox
+{
+	int x;
+	int y;
+	int w;
+	int h;
+};
+
+RWStructuredBuffer<Bbox> bboxBuffer;
+int bboxBufferSize;
+int inputTextureHeight;
+
+Texture2D<float4> inputTexture;
+RWTexture2D<float4> outputTexture;
+
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+	int input_x = id.x;
+	int input_y = id.y;
+	//float4 color = inputTexture[id.xy]; //Blacklist
+	float4 color = float4(0, 0, 0, 1); //Whitelist
+	for (int i = 0; i < bboxBufferSize; i++)
+	{
+		//Changing the coordinate from TopLeft origin to BottomLeft origin
+		int bbox_w = bboxBuffer[i].w;
+		int bbox_h = bboxBuffer[i].h;
+		int bbox_x = bboxBuffer[i].x;
+		int bbox_y = bboxBuffer[i].y; // inputTextureHeight - bboxBuffer[i].y - bbox_h; //H-y-h
+		if (bbox_x <= input_x && input_x <= bbox_x + bbox_w)
+		{
+			if ((bbox_y <= input_y) && (input_y <= (bbox_y + bbox_h)))
+			{
+				//color = float4(0, 0, 0, 1); //Blacklist
+				color = inputTexture[id.xy]; //Whitelist
+				break;
+			}
+		}
+	}
+	
+	outputTexture[id.xy] = color;
+}

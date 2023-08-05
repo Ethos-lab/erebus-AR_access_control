@@ -1,0 +1,14 @@
+function Raycast()
+{
+	let curLoc = GetCurrentLocation();
+	let trustedLoc = GetTrustedLocation("Home");
+	let curFace = GetCurrentFaceId();
+	let trustedFaces = GetTrustedFaceId("Batman");
+	if ( curLoc.within(trustedLoc) )
+	{
+		if ( curFace.matches(trustedFaces) )
+		{
+			Allow;
+		}
+	}
+}
