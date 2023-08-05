@@ -95,6 +95,7 @@ Check openjdk version using `java -version`.
 
 1. `erebus` folder contains our framework implementation in C#, that we 
 open-source for developers and researchers to use as a reference model. We also release two sample AR applications.
+Refer to [**Erebus Framework explanation**](https://github.com/Ethos-lab/erebus-AR_access_control/tree/main/erebus) for more.
 
 2. `policy_gen` folder contains the policy engine implementation which takes
 generates Erebus policies from natural language input.
