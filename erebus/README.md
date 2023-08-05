@@ -27,6 +27,7 @@ Development environment : Unity 2020.3.25f1 LTS, Android 13, Samsung Galaxy S22
 - Android platform
 - **MUST** be Mono scripting  (IL2CPP use AOT compilation -> No runtime code compilation)
 - .NET 4.0
+- **MUST** be ARM64. ARMv7 no longer is compatible with core functionalities of ARCore. 
 - Reconfigure 'Company Name,' 'Product Name,' if you download the Unity project file and set Minimum Android API (25) 
 - Place the runtime code base/parent class ('BaseAssemblyEntryPoint.cs') under StreamingAssets folder
 - Place the default (Placeholder code) erebus language code of the four AR apps and name them, input1.erebus, input2.erebus, input3.erebus, input4.erebus, respectively
