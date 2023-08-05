@@ -124,12 +124,11 @@ can be directly used to reproduce and validate our results.
 The actual implementation, along with the trained models and our training data
 used are all included in the folder `erebus_policy_gen`.
 
-1.  Start up the Docker using `sudo docker run -it --rm -p 8888:8888 sbu:erebus`. If you have configured Anaconda virtual environment on your local system, activate the conda environment `conda activate nlp` in your current shell.
+1. If you are using Docker, start up Docker using `bash docker_run.sh`. If you have configured Anaconda virtual environment on your local system, activate the conda environment `conda activate nlp` in your current shell.
 
 2.  ` cd policy_gen `
 
-3.  Start a Jupyter Notebook Server
-For Docker, `jupyter notebook --ip=* --port=8888 --allow-root` and `jupyter notebook` for local Anaconda environment.
+3.  Start a Jupyter Notebook Server. For Docker, `bash jupyter_run.sh` and `jupyter notebook` for local Anaconda environment.
 
 4. Open the Jupyter notebook console in your browser with the provided URL.
 It will be something like `http://127.0.0.1:8888/?token=<tokenID>`
