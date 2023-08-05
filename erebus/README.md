@@ -1,6 +1,9 @@
-![Optional Text](applications.png)
-
 # Erebus Framework & Example Applications
+
+<p align="center">
+  <img src="applications.png">
+</p>
+
 
 ## Prerequisites
 Please ensure you have the following environments setup with all the dependencies to be able to reproduce the results in the paper. 
@@ -9,15 +12,15 @@ We utilized third-party Unity plugins to facilitate the development process. The
 #### Install Packages & Plugins
 Development environment : Unity 2020.3.25f1 LTS, Android 13, Samsung Galaxy S22
 
-1. OpenCV for Unity 2.4.7 [[AssetStore link](https://assetstore.unity.com/packages/tools/integration/opencv-for-unity-21088)]
-2. Roslyn C# - Runtime Compiler [[AssetStore link](https://assetstore.unity.com/packages/tools/integration/roslyn-c-runtime-compiler-142753)]
-3. NuGet for Unity [[Github link](https://github.com/GlitchEnzo/NuGetForUnity)]
-4. Antlr4.Runtime.Standard.4.10.1 [[NuGet command](https://www.nuget.org/packages/Antlr4.Runtime.Standard/4.10.1)]
-5. NetMQ [[Github link](https://github.com/zeromq/netmq)]
-6. BetterStreamingAssets [[AssetStore link](https://assetstore.unity.com/packages/tools/input-management/better-streaming-assets-103788)]
-7. NatML [[Github link](https://github.com/natmlx/natml-unity)]
-8. Unity AR Foundation [[Official documentation link](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/index.html)]
-9. Unity ARCore XR Plugin [[Official documentation link](https://docs.unity3d.com/Packages/com.unity.xr.arcore@4.1/manual/)]
+1. OpenCV for Unity 2.4.7 [[AssetStore](https://assetstore.unity.com/packages/tools/integration/opencv-for-unity-21088)]
+2. Roslyn C# - Runtime Compiler [[AssetStore](https://assetstore.unity.com/packages/tools/integration/roslyn-c-runtime-compiler-142753)]
+3. NuGet for Unity [[Github](https://github.com/GlitchEnzo/NuGetForUnity)]
+4. Antlr4.Runtime.Standard.4.10.1 [[NuGet](https://www.nuget.org/packages/Antlr4.Runtime.Standard/4.10.1)]
+5. NetMQ [[Github](https://github.com/zeromq/netmq)]
+6. BetterStreamingAssets [[AssetStore](https://assetstore.unity.com/packages/tools/input-management/better-streaming-assets-103788)]
+7. NatML [[Github](https://github.com/natmlx/natml-unity)]
+8. Unity AR Foundation [[Official documentation](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/index.html)]
+9. Unity ARCore XR Plugin [[Official documentation](https://docs.unity3d.com/Packages/com.unity.xr.arcore@4.1/manual/)]
 \* **The example applications contain the Erebus framework in the Unity projects, whereas the closed-sourced plugins are excluded. They must be imported into the applications manually**
 
 #### Unity Project Configurations
