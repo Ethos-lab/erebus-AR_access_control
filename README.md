@@ -124,7 +124,7 @@ can be directly used to reproduce and validate our results.
 The actual implementation, along with the trained models and our training data
 used are all included in the folder `erebus_policy_gen`.
 
-1. If you are using Docker, start up Docker using `bash docker_run.sh`. If you have configured Anaconda virtual environment on your local system, activate the conda environment `conda activate nlp` in your current shell.
+1. If you are using Docker, start up Docker using `bash policy_gen/docker_run.sh`. If you have configured Anaconda virtual environment on your local system, activate the conda environment `conda activate nlp` in your current shell.
 
 2.  ` cd policy_gen `
 
