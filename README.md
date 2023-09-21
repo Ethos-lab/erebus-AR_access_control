@@ -18,6 +18,11 @@ Please use the following citation when referencing our work.
 ## Camera-ready version
 See attached `paper.pdf`.
 
+## USENIX Security publication materials
+Our presentation slides, presentation video, and the USENIX paper
+are posted at the below link.
+
+https://www.usenix.org/conference/usenixsecurity23/presentation/kim-yoonsang
 
 ## Appendix Abstract
 
