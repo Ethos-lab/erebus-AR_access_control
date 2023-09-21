@@ -1,6 +1,20 @@
 # EREBUS: USENIX Security'23 Artifact
 
 
+## Cite
+
+Please use the following citation when referencing our work.
+
+```
+@inproceedings{kim2023erebus,
+  title={Erebus: Access Control for Augmented Reality Systems},
+  author={Kim, Yoonsang and Goutam, Sanket and Rahmati, Amir and Kaufman, Arie},
+  booktitle={32nd USENIX Security Symposium (USENIX Security 23)},
+  pages={929--946},
+  year={2023}
+}
+```
+
 ## Camera-ready version
 See attached `paper.pdf`.
 
