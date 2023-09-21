@@ -1,0 +1,59 @@
+function GetPlane()
+{
+    Allow;
+}
+
+function RegisterEventOnPlanesChange()
+{
+    Allow;
+}
+
+function UnRegisterEventOnPlanesChange()
+{
+    Allow;
+}
+
+function RayCast()
+{
+    Allow;
+}
+
+function ARPlaneTrackables()
+{
+    Allow;
+}
+
+function AddTrackedImage()
+{
+    let curLoc = GetCurrentLocation();
+    let trustedLoc = GetTrustedLocation("Stony Brook");
+    let curFace = GetCurrentFaceId();
+    let trustedFaces = GetTrustedFaceId("Yoonsang Kim");
+    if (curLoc.within(trustedLoc))
+    {
+        if (curFace.matches(trustedFaces))
+        {
+            Allow;
+        }
+    }
+}
+
+function RegisterEventOnImageChange()
+{
+    Allow;
+}
+
+function UnregisterEventOnImageChange()
+{
+    Allow;
+}
+
+function GetObjectRawPixels()
+{
+    Allow;
+}
+
+function GetGPSLocation()
+{
+    Allow;
+}

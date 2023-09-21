@@ -56,7 +56,7 @@ Test environment: Ubuntu 20.04 LTS, Docker version 24.0.4
 
 Install the appropriate [Docker Engine](https://docs.docker.com/engine/install/) depending on your OS and build the docker image using `bash docker_build.sh`. The script generates a docker image named `sbu:erebus`.
 
-#### Option2) Anaconda virtual environment
+#### Option2) Anaconda Virtual Environment
 Test environment: Ubuntu 20.04 LTS, Python 3.8.10, Dotnet 6.0
 
 *Install miniconda*
@@ -113,7 +113,8 @@ Check openjdk version using `java -version`.
 ## Organization of the Artifact
 
 1. `erebus` folder contains our framework implementation in C#, that we 
-open-source for developers and researchers to use as a reference model.
+open-source for developers and researchers to use as a reference model. We also release two sample AR applications.
+Refer to [**Erebus Framework explanation**](https://github.com/Ethos-lab/erebus-AR_access_control/tree/main/erebus) for more.
 
 2. `policy_gen` folder contains the policy engine implementation which takes
 generates Erebus policies from natural language input.
@@ -122,10 +123,7 @@ generates Erebus policies from natural language input.
 developed using ANTLR4, which converts the intermediate policy code to the 
 target platform code.
 
-4. `prototype_apps` contains the sample code for the prototype applications we 
-developed for evaluation.
-
-5. `survey` contains the app and device surveys we conducted to inform the design
+4. `survey` contains the app and device surveys we conducted to inform the design
 of Erebus. Tables [1,2,3] in the paper summarize the results from these surveys.
 
 
@@ -143,12 +141,11 @@ can be directly used to reproduce and validate our results.
 The actual implementation, along with the trained models and our training data
 used are all included in the folder `erebus_policy_gen`.
 
-1.  Start up the Docker using `sudo docker run -it --rm -p 8888:8888 sbu:erebus`. If you have configured Anaconda virtual environment on your local system, activate the conda environment `conda activate nlp` in your current shell.
+1. If you are using Docker, start up Docker using `bash policy_gen/docker_run.sh`. If you have configured Anaconda virtual environment on your local system, activate the conda environment `conda activate nlp` in your current shell.
 
 2.  ` cd policy_gen `
 
-3.  Start a Jupyter Notebook Server
-For Docker, `jupyter notebook --ip=* --port=8888 --allow-root` and `jupyter notebook` for local Anaconda environment.
+3.  Start a Jupyter Notebook Server. For Docker, `bash jupyter_run.sh` and `jupyter notebook` for local Anaconda environment.
 
 4. Open the Jupyter notebook console in your browser with the provided URL.
 It will be something like `http://127.0.0.1:8888/?token=<tokenID>`
@@ -165,7 +162,7 @@ the file just gets overwritten with new content).
 in the subdirectories and parse the input to create the policy required.
 
 
-#### Sample policies that can be tested
+#### Example Policies
 
 The following set of sample policy descriptions are provided for verification.
 Update the `text` field in Cell 2 of the Jupyter notebook with any one of these
@@ -182,7 +179,7 @@ statements and check the output generated in `resources/input.el`.
 + If this app tracks location deny access if Superman is using the app at Work
 + If Batman is playing this game at Home allow plane detection
 
-#### Example input & output
+#### Example Input & Output
 
 Input command passed in the `text` field of `nl_policy_generation.ipynb` notebook file : 
 ` Deny location access if Batman is Home `
@@ -236,7 +233,7 @@ input for target code generation.
 > If there are any permission errors for installation, make sure the 
 > `Scripts/Grammar/antlr-4.10.1-complete.jar` has executable permissions.
 
-#### Example input & output
+#### Example Input & Output
 
 Input command from `input.el` Erebus language file :
 ```
@@ -293,3 +290,11 @@ namespace Erebus
 		}
 }
 ```
+
+## Frequently Asked Questions (FAQ)
+
+**Q)** The provided Dockerfile is incompatible with target system on my Mac. [**(Solution)**](https://github.com/Ethos-lab/erebus-AR_access_control/issues/4)
+
+**Q)** Some packages failed to install with my version of Python. [**(Solution)**](https://github.com/Ethos-lab/erebus-AR_access_control/issues/3)
+
+**Q)** I only see blank page at the startup page of jupyter notebook [**(Solution)**](https://github.com/Ethos-lab/erebus-AR_access_control/issues/5)

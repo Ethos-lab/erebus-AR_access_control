@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HungarianAlgorithm</name>
+    </assembly>
+    <members>
+        <member name="T:HungarianAlgorithm.Extensions.ArrayExtensions">
+            <summary>
+            Array Extensions.
+            </summary>
+        </member>
+        <member name="M:HungarianAlgorithm.Extensions.ArrayExtensions.SquareArray``1(``0[][])">
+            <summary>
+            Creates a new <see cref="T:System.Array"/>, having equal elements for both dimensions.
+            Rows or columns added is filled with null values.
+            </summary>
+            <typeparam name="T">The type of elements in the array.</typeparam>
+            <param name="array">The <see cref="T:System.Array"/> to square.</param>
+            <returns>The <see cref="T:System.Array"/> squared.</returns>
+        </member>
+        <member name="T:HungarianAlgorithm.HungarianAlgorithm">
+            <summary>
+            Hungarian Algorithm.
+            </summary>
+        </member>
+        <member name="M:HungarianAlgorithm.HungarianAlgorithm.FindAssignments(System.Int32[0:,0:])">
+            <summary>
+            Finds the optimal assignments for a given matrix of agents and costed tasks such that the total cost is minimized.
+            </summary>
+            <param name="costs">A cost matrix; the element at row <em>i</em> and column <em>j</em> represents the cost of agent <em>i</em> performing task <em>j</em>.</param>
+            <returns>A matrix of assignments; the value of element <em>i</em> is the column of the task assigned to agent <em>i</em>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="costs"/> is null.</exception>
+        </member>
+    </members>
+</doc>

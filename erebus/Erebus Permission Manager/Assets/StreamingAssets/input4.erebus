@@ -1,0 +1,55 @@
+function GetPlane()
+{
+    Allow;
+}
+
+function RayCast()
+{
+    Allow;
+}
+
+function GetObjectRawPixels()
+{
+    let currentCameraFrame = GetCurrentCameraFrame();
+    let objName = "Person";
+
+    if (currentCameraFrame.includes(objName))
+    {
+        Allow;
+    }
+}
+
+function GetGPSLocation()
+{
+    Allow;
+}
+
+function ARPlaneTrackables()
+{
+    Allow;
+}
+
+function AddTrackedImage()
+{
+    Allow;
+}
+
+function RegisterEventOnImageChange()
+{
+    Allow;
+}
+
+function UnregisterEventOnImageChange()
+{
+    Allow;
+}
+
+function RegisterEventOnPlanesChange()
+{
+    Allow;
+}
+
+function UnRegisterEventOnPlanesChange()
+{
+    Allow;
+}

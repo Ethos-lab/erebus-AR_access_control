@@ -1,0 +1,9 @@
+function GetPlane()
+{
+    Allow;
+}
+
+function RayCast()
+{
+    Allow;
+}

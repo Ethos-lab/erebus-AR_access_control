@@ -1,0 +1,52 @@
+function GetPlane()
+{
+    let curTime = GetCurrentTime();
+    let validHour = GetValidHour("Weekdays");
+    if (curTime.within(validHour))
+    {
+        Allow;
+    }
+}
+
+function GetARRayCast()
+{
+    let curLoc = GetCurrentLocation();
+    let trustedLoc = GetTrustedLocation("Home");
+    if ( curLoc.within(trustedLoc) )
+    {
+        Allow;
+    }
+}
+
+function GetPlaceTrackables()
+{
+    let curFace = GetCurrentFaceId();
+    let trustedFaces = GetTrustedFaceIds();
+    let curTime = GetCurrentTime();
+
+    if (curFace.matches(trustedFaces) && (0800 < curTime && curTime < 2200))
+    {
+        Allow;
+    }    
+}
+
+function RegisterEventOnPlanesChange()
+{
+    let curFace = GetCurrentFaceId();
+    let trustedFace = GetTrustedFaceId("Yoonsang");
+    if (curFace.matches(trustedFace))
+    {
+        Allow;
+    }
+}
+
+function GetObjectRawPixels()
+{
+    let currentCameraFrame = GetCurrentCameraFrame();
+    let objName = "Keyboard";
+
+    if (currentCameraFrame.contains(objName))
+    {
+        Allow;
+    }
+}
